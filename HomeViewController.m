@@ -8,6 +8,8 @@
 
 #import "HomeViewController.h"
 #import "FloatingWindowViewController.h"
+#import "ChangeNetworkViewController.h"
+#import "PlaySoundViewController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -29,7 +31,7 @@
 
 - (void)initUI {
     self.title = @"首页";
-    self.titleArray = @[@"小圆点"];
+    self.titleArray = @[@"小圆点",@"切换网络环境",@"文字转语音"];
     [self.view addSubview:self.tableView];
 }
 
@@ -52,6 +54,14 @@
     NSString *title = self.titleArray[indexPath.row];
     if ([title isEqualToString:@"小圆点"]) {
         FloatingWindowViewController *vc = [[FloatingWindowViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([title isEqualToString:@"切换网络环境"]) {
+        ChangeNetworkViewController *vc = [[ChangeNetworkViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([title isEqualToString:@"文字转语音"]) {
+        PlaySoundViewController *vc = [[PlaySoundViewController alloc] init];
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
     }

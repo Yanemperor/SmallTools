@@ -1,0 +1,28 @@
+ [{
+  "baseURL" : "http://app.release.com",
+  "versionUpdateURL" : "release",
+  "baiduMapKey" : "releaseBaidu",
+  "youMenSdkCode" : "releaseYouMen",
+  "buglySdkKey" : "releaseBugly",
+  "apnsCername" : "releaseApns",
+  "env" : "正式环境",
+  "envKey" : "product",
+  },{
+ "baseURL" : "http://192.168.1.1:8888",
+ "versionUpdateURL" : "http://192.168.1.1:8888/version/update",
+ "baiduMapKey" : "testBaidu",
+ "youMenSdkCode" : "testYouMen",
+ "buglySdkKey" : "testBugly",
+ "apnsCername" : "testApns",
+ "env" : "车贷测试环境",
+ "envKey" : "test",
+ },{
+ "baseURL" : "http://app.simulation.com",
+ "versionUpdateURL" : "http://simulation.com/version/update",
+ "baiduMapKey" : "simulationBaidu",
+ "youMenSdkCode" : "simulationYouMen",
+ "buglySdkKey" : "simulationBugly",
+ "apnsCername" : "simulationApns",
+ "env" : "车贷模测环境",
+ "envKey" : "simulation",
+  }]
