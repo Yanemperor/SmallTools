@@ -10,7 +10,7 @@
 #import "FloatingWindowViewController.h"
 #import "ChangeNetworkViewController.h"
 #import "PlaySoundViewController.h"
-
+#import "UIAlertViewToolsViewController.h"
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -31,7 +31,7 @@
 
 - (void)initUI {
     self.title = @"首页";
-    self.titleArray = @[@"小圆点",@"切换网络环境",@"文字转语音"];
+    self.titleArray = @[@"小圆点",@"切换网络环境",@"文字转语音",@"UIAlertViewTools"];
     [self.view addSubview:self.tableView];
 }
 
@@ -64,6 +64,11 @@
         PlaySoundViewController *vc = [[PlaySoundViewController alloc] init];
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
+    }else if ([title isEqualToString:@"UIAlertViewTools"]) {
+        UIAlertViewToolsViewController *vc = [[UIAlertViewToolsViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+//        [self presentViewController:vc animated:YES completion:nil];
     }
 }
 
