@@ -10,7 +10,9 @@
 #import "FloatingWindowViewController.h"
 #import "ChangeNetworkViewController.h"
 #import "PlaySoundViewController.h"
+#import "RouterViewController.h"
 #import "UIAlertViewToolsViewController.h"
+#import "PreventRepeatedButtonClickViewController.h"
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -31,7 +33,7 @@
 
 - (void)initUI {
     self.title = @"首页";
-    self.titleArray = @[@"小圆点",@"切换网络环境",@"文字转语音",@"UIAlertViewTools"];
+    self.titleArray = @[@"小圆点",@"切换网络环境",@"文字转语音",@"一种基于ResponderChain的对象交互方式",@"UIAlertViewTools",@"button防多点"];
     [self.view addSubview:self.tableView];
 }
 
@@ -64,11 +66,19 @@
         PlaySoundViewController *vc = [[PlaySoundViewController alloc] init];
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
+    }else if ([title isEqualToString:@"一种基于ResponderChain的对象交互方式"]) {
+        RouterViewController *vc = [[RouterViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
     }else if ([title isEqualToString:@"UIAlertViewTools"]) {
         UIAlertViewToolsViewController *vc = [[UIAlertViewToolsViewController alloc] init];
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
 //        [self presentViewController:vc animated:YES completion:nil];
+    }else if ([title isEqualToString:@"button防多点"]) {
+        PreventRepeatedButtonClickViewController *vc = [[PreventRepeatedButtonClickViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 

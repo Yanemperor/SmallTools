@@ -13,5 +13,6 @@
 #import "ReactiveCocoa.h"
 #import "Masonry.h"
 #import "YYModel.h"
+#import "UIResponder+Router.h"
 
 #endif /* PrefixHeader_pch */
