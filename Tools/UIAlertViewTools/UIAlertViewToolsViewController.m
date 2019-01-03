@@ -30,7 +30,7 @@
     button.center = self.view.center;
     [button setTitle:@"alertView" forState:UIControlStateNormal];
     [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-        [UIAlertViewTools alertWithTitle:@"提示" message:@"提示信息" cancelButtonTitle:@"取消" otherButtonTitles:@"确定" withBlock:^(NSInteger index) {
+        [UIAlertViewTools alertWithTitle:@"提示" message:@"提示信息" cancelButtonTitle:@"取消" otherButtonTitle:@"确定" withBlock:^(NSInteger index) {
             if (index == 0) {
                 NSLog(@"取消");
             }else{
