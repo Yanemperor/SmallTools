@@ -13,6 +13,8 @@
 #import "RouterViewController.h"
 #import "UIAlertViewToolsViewController.h"
 #import "PreventRepeatedButtonClickViewController.h"
+#import "YYFPSViewController.h"
+
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -33,7 +35,7 @@
 
 - (void)initUI {
     self.title = @"首页";
-    self.titleArray = @[@"小圆点",@"切换网络环境",@"文字转语音",@"一种基于ResponderChain的对象交互方式",@"UIAlertViewTools",@"button防多点"];
+    self.titleArray = @[@"小圆点",@"切换网络环境",@"文字转语音",@"一种基于ResponderChain的对象交互方式",@"UIAlertViewTools",@"button防多点",@"YYFPS"];
     [self.view addSubview:self.tableView];
 }
 
@@ -77,6 +79,10 @@
 //        [self presentViewController:vc animated:YES completion:nil];
     }else if ([title isEqualToString:@"button防多点"]) {
         PreventRepeatedButtonClickViewController *vc = [[PreventRepeatedButtonClickViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([title isEqualToString:@"YYFPS"]) {
+        YYFPSViewController *vc = [[YYFPSViewController alloc] init];
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
     }
