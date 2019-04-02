@@ -23,6 +23,10 @@
     HomeViewController *homeVC = [[HomeViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:homeVC];
     self.window.rootViewController = nav;
+#if DEBUG
+    // iOS
+    [[NSBundle bundleWithPath:@"/Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle"] load];
+#endif
     return YES;
 }
 

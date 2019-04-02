@@ -14,6 +14,7 @@
 #import "UIAlertViewToolsViewController.h"
 #import "PreventRepeatedButtonClickViewController.h"
 #import "YYFPSViewController.h"
+#import "InjectionIIIViewController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -35,7 +36,7 @@
 
 - (void)initUI {
     self.title = @"首页";
-    self.titleArray = @[@"小圆点",@"切换网络环境",@"文字转语音",@"一种基于ResponderChain的对象交互方式",@"UIAlertViewTools",@"button防多点",@"YYFPS"];
+    self.titleArray = @[@"小圆点",@"切换网络环境",@"文字转语音",@"一种基于ResponderChain的对象交互方式",@"UIAlertViewTools",@"button防多点",@"YYFPS",@"InjectionIII"];
     [self.view addSubview:self.tableView];
 }
 
@@ -83,6 +84,10 @@
         [self.navigationController pushViewController:vc animated:YES];
     }else if ([title isEqualToString:@"YYFPS"]) {
         YYFPSViewController *vc = [[YYFPSViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([title isEqualToString:@"InjectionIII"]) {
+        InjectionIIIViewController *vc = [[InjectionIIIViewController alloc] init];
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
     }
