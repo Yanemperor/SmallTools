@@ -11,6 +11,7 @@
 @interface InjectionIIIViewController ()
 
 @property (nonatomic, strong) UIButton *button;
+@property (nonatomic, strong) UIView *bgView;
 
 @end
 
@@ -32,6 +33,12 @@
         make.center.equalTo(self.view);
         make.size.mas_equalTo(CGSizeMake(120, 30));
     }];
+    [self.view addSubview:self.bgView];
+    [self.bgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.button.mas_centerX);
+        make.top.equalTo(self.button.mas_bottom).offset(30);
+        make.size.mas_equalTo(CGSizeMake(120, 40));
+    }];
 }
 
 #pragma mark - View(页面处理)
@@ -47,7 +54,7 @@
 #pragma mark - private methods(内部接口)
 // App Store下载InjectionIII 运行后打开注释，然后control+= , 点击按钮发现injected方法m被执行。
 - (void)buttonClick {
-//    [self injected];
+    [self injected];
     
 }
 
@@ -64,7 +71,7 @@
 - (UIButton *)button {
     if (!_button) {
         _button = [[UIButton alloc] init];
-        _button.backgroundColor = [UIColor orangeColor];
+        _button.backgroundColor = [UIColor blackColor];
         [_button setTitle:@"点击" forState:UIControlStateNormal];
         _button.layer.cornerRadius = 3;
         _button.layer.masksToBounds = YES;
@@ -73,6 +80,12 @@
     return _button;
 }
 
-
+- (UIView *)bgView {
+    if (!_bgView) {
+        _bgView = [[UIView alloc] init];
+        _bgView.backgroundColor = [UIColor orangeColor];
+    }
+    return _bgView;
+}
 
 @end
