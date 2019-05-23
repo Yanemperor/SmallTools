@@ -33,12 +33,12 @@
         make.center.equalTo(self.view);
         make.size.mas_equalTo(CGSizeMake(120, 30));
     }];
-    [self.view addSubview:self.bgView];
-    [self.bgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.button.mas_centerX);
-        make.top.equalTo(self.button.mas_bottom).offset(30);
-        make.size.mas_equalTo(CGSizeMake(120, 40));
-    }];
+//    [self.view addSubview:self.bgView];
+//    [self.bgView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerX.equalTo(self.button.mas_centerX);
+//        make.top.equalTo(self.button.mas_bottom).offset(30);
+//        make.size.mas_equalTo(CGSizeMake(120, 40));
+//    }];
 }
 
 #pragma mark - View(页面处理)
