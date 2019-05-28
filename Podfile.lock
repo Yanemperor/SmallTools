@@ -1,0 +1,40 @@
+PODS:
+  - FDFullscreenPopGesture (1.1)
+  - Masonry (1.1.0)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
+  - YYCategories (1.0.4):
+    - YYCategories/no-arc (= 1.0.4)
+  - YYCategories/no-arc (1.0.4)
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - FDFullscreenPopGesture (= 1.1)
+  - Masonry
+  - ReactiveCocoa (= 2.5)
+  - YYCategories
+  - YYModel
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FDFullscreenPopGesture
+    - Masonry
+    - ReactiveCocoa
+    - YYCategories
+    - YYModel
+
+SPEC CHECKSUMS:
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: 14f90e34ba071f09c581e47c9bba62b1a7b82762
+
+COCOAPODS: 1.6.1

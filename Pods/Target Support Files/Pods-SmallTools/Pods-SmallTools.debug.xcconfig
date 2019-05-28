@@ -1,0 +1,9 @@
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/FDFullscreenPopGesture" "${PODS_CONFIGURATION_BUILD_DIR}/Masonry" "${PODS_CONFIGURATION_BUILD_DIR}/ReactiveCocoa" "${PODS_CONFIGURATION_BUILD_DIR}/YYCategories" "${PODS_CONFIGURATION_BUILD_DIR}/YYModel"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Masonry/Masonry.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/ReactiveCocoa/ReactiveCocoa.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/YYCategories/YYCategories.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/YYModel/YYModel.framework/Headers"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_LDFLAGS = $(inherited) -l"z" -framework "Accelerate" -framework "CoreFoundation" -framework "CoreGraphics" -framework "CoreImage" -framework "CoreText" -framework "FDFullscreenPopGesture" -framework "Foundation" -framework "ImageIO" -framework "Masonry" -framework "QuartzCore" -framework "ReactiveCocoa" -framework "UIKit" -framework "YYCategories" -framework "YYModel"
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
